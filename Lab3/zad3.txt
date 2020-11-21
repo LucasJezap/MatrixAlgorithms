@@ -1,0 +1,23 @@
+numeracja indeksów od zera
+
+Y = zeros(N);
+for (int i=0; i<N; i++) {
+	for (int j=A.colptr[i]; j < A.colptr[i+1]; j++) {
+		Y[i] += A.val[j] * B[A.icl[j]];
+	}
+}
+
+ICL = (0,1,2,0,2)
+COLPTR = (0,1,3,5)
+VAL = (1,2,3,4,5)
+B = (1,2,3)
+
+
+Y = (0,0,0)
+Y[0] += 1 * 1
+Y[1] += 2 * 2 
+Y[1] += 3 * 3
+Y[2] += 4 * 1
+Y[2] += 5 * 3
+
+Y = (1,13,19)

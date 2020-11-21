@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Bossg/OneDrive/Pulpit/AGH semestr 5/Algorytmy macierzowe/Lab3/main.cpp
+iostream
+-
+random
+-
+iomanip
+-
+chrono
+-
+
