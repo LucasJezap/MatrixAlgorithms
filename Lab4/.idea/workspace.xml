@@ -53,6 +53,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -79,6 +80,9 @@
       <workItem from="1607019290957" duration="1809000" />
       <workItem from="1607079807722" duration="7967000" />
       <workItem from="1607092676950" duration="335000" />
+      <workItem from="1607348039435" duration="740000" />
+      <workItem from="1608557868694" duration="765000" />
+      <workItem from="1608981130856" duration="24000" />
     </task>
     <servers />
   </component>
@@ -98,6 +102,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1607348174248">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1607348174248" />
     <state width="1493" height="174" key="GridCell.Tab.0.bottom" timestamp="1607093011402">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

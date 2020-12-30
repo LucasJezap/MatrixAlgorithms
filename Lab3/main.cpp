@@ -48,6 +48,8 @@ Csr_format create_new_csr_format(int nnz, int n) {
 }
 
 void print_csr_format(Csr_format format) {
+    if (!show_matrixes)
+        return;
     std::cout << "---------------------------------------------------" << std::endl;
     std::cout << "CSR FORMAT" << std::endl;
     std::cout << "NNZ = " << format.nnz << std::endl;
@@ -78,7 +80,7 @@ Csr_format create_csr_from_csc_format(Csc_format csc_format) {
     // first i get rowptr array -> it's fairly easy
     for (int i = 0; i < csc_format.n + 1; i++)
         csr_format.rowptr[i] = 0;
-    for (int i = 0; i < csc_format.n; i++) {
+    for (int i = 0; i < csc_format.nnz; i++) {
         csr_format.rowptr[csc_format.irn[i]]++;
     }
     csr_format.rowptr[0] = 1;
@@ -176,6 +178,8 @@ double **create_matrix_from_csc_format(Csc_format format) {
 }
 
 void print_csc_format(Csc_format format) {
+    if (!show_matrixes)
+        return;
     std::cout << "---------------------------------------------------" << std::endl;
     std::cout << "CSC FORMAT" << std::endl;
     std::cout << "NNZ = " << format.nnz << std::endl;

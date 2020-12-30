@@ -34,6 +34,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lab4" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -47,11 +48,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -63,6 +59,10 @@
       <updated>1605780994274</updated>
       <workItem from="1605780999212" duration="10115000" />
       <workItem from="1605814681706" duration="2291000" />
+      <workItem from="1606987887755" duration="33000" />
+      <workItem from="1607348181815" duration="2187000" />
+      <workItem from="1608557833125" duration="3459000" />
+      <workItem from="1608981545809" duration="14000" />
     </task>
     <servers />
   </component>
@@ -70,21 +70,25 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1493" height="705" key="GridCell.Tab.0.bottom" timestamp="1605817200156">
+    <state x="549" y="174" key="FileChooserDialogImpl" timestamp="1608557865861">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="705" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1605817200156" />
-    <state width="1493" height="705" key="GridCell.Tab.0.center" timestamp="1605817200156">
+    <state x="549" y="174" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1608557865861" />
+    <state width="1493" height="384" key="GridCell.Tab.0.bottom" timestamp="1608561703043">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="705" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1605817200156" />
-    <state width="1493" height="705" key="GridCell.Tab.0.left" timestamp="1605817200156">
+    <state width="1493" height="384" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1608561703043" />
+    <state width="1493" height="384" key="GridCell.Tab.0.center" timestamp="1608561703043">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="705" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1605817200156" />
-    <state width="1493" height="705" key="GridCell.Tab.0.right" timestamp="1605817200156">
+    <state width="1493" height="384" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1608561703043" />
+    <state width="1493" height="384" key="GridCell.Tab.0.left" timestamp="1608561703043">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="705" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1605817200156" />
+    <state width="1493" height="384" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1608561703043" />
+    <state width="1493" height="384" key="GridCell.Tab.0.right" timestamp="1608561703043">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="384" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1608561703043" />
   </component>
 </project>

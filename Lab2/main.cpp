@@ -34,8 +34,9 @@ void show_matrix(double **M, int m, int n) {
 
 double **create_matrix(int m, int n, const std::string &gen) {
     auto **matrix = new double *[m];
-    std::default_random_engine  generator{static_cast<std::bernoulli_distribution::result_type>(std::chrono::system_clock::now().time_since_epoch().count())};
-    std::uniform_int_distribution<int> distribution(1,100);
+    std::default_random_engine generator{
+            static_cast<std::bernoulli_distribution::result_type>(std::chrono::system_clock::now().time_since_epoch().count())};
+    std::uniform_int_distribution<int> distribution(1, 100);
     for (int i = 0; i < m; i++)
         matrix[i] = new double[n];
 
