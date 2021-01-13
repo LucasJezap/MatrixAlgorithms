@@ -34,7 +34,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lab4" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -63,6 +63,8 @@
       <workItem from="1607348181815" duration="2187000" />
       <workItem from="1608557833125" duration="3459000" />
       <workItem from="1608981545809" duration="14000" />
+      <workItem from="1610372239226" duration="19000" />
+      <workItem from="1610372524358" duration="6000" />
     </task>
     <servers />
   </component>

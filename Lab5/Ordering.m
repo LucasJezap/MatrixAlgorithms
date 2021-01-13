@@ -13,7 +13,7 @@ function Ordering()
   % PROSZE STWORZYC PERMUTACJE KTORA ZNACZNIE ZREDUKUJE CZAS LU FAKTORYZACJI
   % ZADANIE TO NALEZY WYKONAC W MALTAB LUB OCTAVE, TERMIN ODDANIA PIERWSZE CWICZENIA W STYCZNIU
   
-  for r=7:12 %petla po rozmiarze macierzy
+  for r=2:10 %petla po rozmiarze macierzy
     N=3*(2^(r+1)-1); %rozmiar macierzy obliczamy na podstawie r
     %N=8; %rozmiar macierzy obliczamy na podstawie r
     k=1;
@@ -24,6 +24,7 @@ function Ordering()
       endif       
     endfor
     
+    % tworzenie inicja³u    
     T = [
     1 0 -N/2
     0 1 -N/2
@@ -45,26 +46,49 @@ function Ordering()
     
     I = inv(S * R * T);
     
-    for y = 0.2:0.01:1
-      P = I * [0; y; 1];
+    for y = 0.2:0.001:1
+      P = I * [-0.5; y; 1];
       x = ceil(P(1));
       y = ceil(P(2));
       matrix_i(k)=x;matrix_j(k)=y; matrix_v(k)=rand()+1; k=k+1;
     endfor
     
-    for x = 0:0.01:0.5
+    for x = -0.5:0.001:0
       P = I * [x; 0.2; 1];
       x = ceil(P(1));
       y = ceil(P(2));
       matrix_i(k)=x;matrix_j(k)=y; matrix_v(k)=rand()+1; k=k+1;
     endfor
     
-    for t = 0:0.01:1
-      P = I * [-0.2+t * 0.4; 0.45 + t * 0.2; 1];
+    for t = 0:0.001:1
+      P = I * [-0.7+t * 0.4; 0.45 + t * 0.2; 1];
       x = ceil(P(1));
       y = ceil(P(2));
       matrix_i(k)=x;matrix_j(k)=y; matrix_v(k)=rand()+1; k=k+1;
-    endfor  
+    endfor
+    
+    for y = 0.2:0.001:1
+      P = I * [0.6; y; 1];
+      x = ceil(P(1));
+      y = ceil(P(2));
+      matrix_i(k)=x;matrix_j(k)=y; matrix_v(k)=rand()+1; k=k+1;
+    endfor
+    
+    for x = 0.1:0.001:0.6
+      P = I * [x; 1; 1];
+      x = ceil(P(1));
+      y = ceil(P(2));
+      matrix_i(k)=x;matrix_j(k)=y; matrix_v(k)=rand()+1; k=k+1;
+    endfor
+    
+    for x = 0.1:0.001:0.6
+      P = I * [x; 1.6*x*x-1.12*x+0.296; 1];
+      x = ceil(P(1));
+      y = ceil(P(2));
+      matrix_i(k)=x;matrix_j(k)=y; matrix_v(k)=rand()+1; k=k+1;
+    endfor
+    
+    % tworzenie inicja³u    
     
     k=k-1;
     matrix_ii(1:k)=matrix_i(1:k);
@@ -110,7 +134,7 @@ function Ordering()
         endif        
       endfor     
     endfor
-        
+    
     %aplikujemy reordering
     for i=1:k 
       ii=matrix_ii(i);
@@ -118,7 +142,7 @@ function Ordering()
       matrix_ii(i)=replace(ii);
       matrix_jj(i)=replace(jj);
     endfor
-        
+    
     
     S=sparse(matrix_ii,matrix_jj,matrix_vv);
     %<- TUTAJ ROBIMY ODPOWIEDNI REORDERING
@@ -135,32 +159,32 @@ function Ordering()
     
   endfor
   
-  function I = inorder(N)
+  function Ind = inorder(N) % reordering wg wierszy (najmniejszy stopieñ)
     deg(1:N) = -1; %poniewaz dodamy krawedz z samym sob¹
     [I,J,V] = find(S);
     for k = 1:nnz(S)
-      deg(J(k)) += 1;
+      deg(I(k)) += 1;
     endfor
-    [_, I] = sort(deg);
-
+    [_, Ind] = sort(deg);
+    
   endfunction
   
-%procedura tworzaca rekurencyjnie wektor permutacji
-%https://www.mdpi.com/2073-8994/12/12/2070
-function m = postorder(i,j,N)
-  if 3*2*i<=N
-    j=postorder(2*i,j,N);
-  endif
-  if 3*(2*i+1)<=N 
-    j=postorder(2*i+1,j,N);  
-  endif    
-  jj=j;
-  ii=N/3-i+1;
-  ordering(3*(jj-1)+1)=3*(ii-1)+1;
-  ordering(3*(jj-1)+2)=3*(ii-1)+2;
-  ordering(3*(jj-1)+3)=3*(ii-1)+3;
-  j=j+1;
-  m=j;
-endfunction
-
+  %procedura tworzaca rekurencyjnie wektor permutacji
+  %https://www.mdpi.com/2073-8994/12/12/2070
+  function m = postorder(i,j,N)
+    if 3*2*i<=N
+      j=postorder(2*i,j,N);
+    endif
+    if 3*(2*i+1)<=N 
+      j=postorder(2*i+1,j,N);  
+    endif    
+    jj=j;
+    ii=N/3-i+1;
+    ordering(3*(jj-1)+1)=3*(ii-1)+1;
+    ordering(3*(jj-1)+2)=3*(ii-1)+2;
+    ordering(3*(jj-1)+3)=3*(ii-1)+3;
+    j=j+1;
+    m=j;
+  endfunction
+  
 endfunction

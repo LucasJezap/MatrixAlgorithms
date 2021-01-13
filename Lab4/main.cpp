@@ -280,7 +280,7 @@ void lu_decomposition_csr(Csr_format csr_format) {     // O(N * NNZ^2)
                 while (j < coordinate_format.nnz) {       // O(NNZ)
                     while (coordinate_format.jcn[j] <= col) { j++; }  // pierwszy element w nowej kolumnie
                     col = coordinate_format.jcn[j];
-                    while (coordinate_format.jcn[j] == col &&
+                    while (coordinate_format.jcn[j] == col &&   
                            coordinate_format.irn[j] < k + 1) { j++; } // element w k-tym wierszu
                     // sprawdzam czy to odpowiedni element - wiersz k
                     if (coordinate_format.irn[j] == k + 1) {
